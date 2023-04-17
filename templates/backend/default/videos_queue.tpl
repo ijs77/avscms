@@ -12,8 +12,8 @@
 
 			<div class="col-md-12">
 				<ul class="nav nav-tabs" id="tab-01">
-					<li class="{if (($total_queue_fp == 0) && ($total_queue_sp == 0)) || ($total_queue_fp > 0)}active{/if}"><a href="#tab1"><b>1st</b> Pass {if $total_queue_fp > 0}&nbsp;<i class="fas fa-circle-notch fa-spin text-info" alt="Converting" title="Converting"></i>{/if}</a></li>
-					<li class="{if ($total_queue_sp > 0) && ($total_queue_fp == 0)}active{/if}"><a href="#tab2"><b>2nd</b> Pass {if $total_queue_sp > 0}&nbsp;<i class="fas fa-circle-notch fa-spin text-info" alt="Converting" title="Converting"></i>{/if}</a></li>
+					<li class="{if (($total_queue_fp == 0) && ($total_queue_sp == 0)) || ($total_queue_fp > 0)}active{/if}"><a href="#tab1"><b>1st</b> Pass {if $total_queue_fp > 0}&nbsp;<i class="fa fa-circle-o-notch fa-spin text-info" alt="Converting" title="Converting"></i>{/if}</a></li>
+					<li class="{if ($total_queue_sp > 0) && ($total_queue_fp == 0)}active{/if}"><a href="#tab2"><b>2nd</b> Pass {if $total_queue_sp > 0}&nbsp;<i class="fa fa-circle-o-notch fa-spin text-info" alt="Converting" title="Converting"></i>{/if}</a></li>
 				</ul>
 				<div class="tab-content m-0">
 					<div class="tab-pane {if (($total_queue_fp == 0) && ($total_queue_sp == 0)) || ($total_queue_fp > 0)}active{/if}" id="tab1">	
@@ -41,7 +41,7 @@
 											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}"><a href="users.php?m=all&all=1&UID={$q_fp.UID}">{$username}</a></td>
 											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{$q_fp.video_name}</td>
 											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}"><span alt="{$q_fp.title}" title="{$q_fp.title}">{$q_fp.title|escape|truncate:20}</span></td>
-											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{if $q_fp.status == '1'}<i class="fas fa-circle-notch fa-spin text-info" alt="Converting" title="Converting"></i>{else}<i class="fas fa-hourglass-half" alt="Waiting" title="Waiting"></i>{/if}</td>
+											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{if $q_fp.status == '1'}<i class="fa fa-circle-o-notch fa-spin text-info" alt="Converting" title="Converting"></i>{else}<i class="fa fa-hourglass-half" alt="Waiting" title="Waiting"></i>{/if}</td>
 											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{$q_fp.start|queue}</td>
 											<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{$q_fp.addtime|date_format:"%b %d, %Y %I:%M %p"}</td>
 											<td class="action {if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">			
@@ -84,7 +84,7 @@
 										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}"><a href="users.php?m=all&all=1&UID={$q_sp.UID}">{$username}</a></td>
 										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{$q_sp.video_name}</td>
 										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}"><span alt="{$q_sp.title}" title="{$q_sp.title}">{$q_sp.title|escape|truncate:20}</span></td>
-										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{if $q_sp.status == '1'}<i class="fas fa-circle-notch fa-spin text-info" alt="Converting" title="Converting"></i>{else}<i class="fas fa-hourglass-half" alt="Waiting" title="Waiting"></i>{/if}</td>
+										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{if $q_sp.status == '1'}<i class="fa fa-circle-o-notch fa-spin text-info" alt="Converting" title="Converting"></i>{else}<i class="fas fa-hourglass-half" alt="Waiting" title="Waiting"></i>{/if}</td>
 										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{$q_sp.start|queue}</td>
 										<td class="{if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">{$q_sp.addtime|date_format:"%b %d, %Y %I:%M %p"}</td>
 										<td class="action {if $smarty.foreach.ad_block.iteration mod 2 == 1}grey{else}white{/if}">			
